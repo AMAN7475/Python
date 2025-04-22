@@ -310,7 +310,7 @@ y = convert_to_int(x)
 print(y)""" 
 
 
-def add(value_1,value_2):
+"""def add(value_1,value_2):
     return (value_1 + value_2)
 
 def substract(value_1,value_2):
@@ -331,20 +331,9 @@ def convert_to_integer(value):
         return(int(value))
 
     else:
-        return(value)         
+        return(value)   
 
-Num_1 = float(input("Enter 1st Number : "))
-Num_2 = float(input("Enter 2nd Number : "))
-
-print("Select among following operations")
-print("1. Addition")
-print("2. Substraction")
-print("3. Multiplication")
-print("4. Division")
-
-aman = True
-while aman:
-
+def AMAN_R(): 
     select = int(input("Select operation among 1,2,3,4 : "))
 
     if select == 1:
@@ -361,12 +350,46 @@ while aman:
 
     else:
         print("Invalid Input")
+        AMAN_R()     
+
+Num_1 = float(input("Enter 1st Number : "))
+Num_2 = float(input("Enter 2nd Number : "))
+
+print("Select among following operations")
+print("1. Addition")
+print("2. Substraction")
+print("3. Multiplication")
+print("4. Division")
+
+aman = True
+while aman:
+
+    AMAN_R()
 
     next_calculation = input("Want to do next calculation ? Y/N : ")
     if next_calculation == "N":
-        aman = False
+        aman = False"""
 
-        
+def divisiblity():
+    value = int(input("Enter No : "))
+
+    if value % 3 == 0 and value % 5 == 0:
+        print ("fizz, buzz")
+        return divisiblity()
+
+    elif value % 3 == 0:
+        print("fizz")
+        return divisiblity()
+
+    elif value % 5 == 0:
+        print ("buzz")
+        return divisiblity()  
+
+    else:
+        print ("Invalid Input,try again")
+        return divisiblity() 
+
+print(divisiblity())
 
 
-        
+    
